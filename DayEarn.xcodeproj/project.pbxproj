@@ -11,6 +11,17 @@
 		ACEB4743290A242E0076630E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB4742290A242E0076630E /* ContentView.swift */; };
 		ACEB4745290A242F0076630E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACEB4744290A242F0076630E /* Assets.xcassets */; };
 		ACEB4748290A242F0076630E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACEB4747290A242F0076630E /* Preview Assets.xcassets */; };
+		ACEB4750290A24950076630E /* Khach.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB474F290A24950076630E /* Khach.swift */; };
+		ACEB4752290A24F30076630E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB4751290A24F30076630E /* Service.swift */; };
+		ACEB4754290A25290076630E /* KhachData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB4753290A25290076630E /* KhachData.swift */; };
+		ACEB4756290A254D0076630E /* Technician.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB4755290A254D0076630E /* Technician.swift */; };
+		ACEB4759290A25CC0076630E /* ClientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB4758290A25CC0076630E /* ClientList.swift */; };
+		ACEB475B290A26140076630E /* XapSep.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB475A290A26140076630E /* XapSep.swift */; };
+		ACEB475D290A26330076630E /* ClientEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB475C290A26330076630E /* ClientEdit.swift */; };
+		ACEB475F290A265E0076630E /* KhachRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB475E290A265E0076630E /* KhachRow.swift */; };
+		ACEB4761290A26870076630E /* ClientDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB4760290A26870076630E /* ClientDetail.swift */; };
+		ACEB4763290A26B20076630E /* ServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB4762290A26B20076630E /* ServiceView.swift */; };
+		ACEB4765290A26CF0076630E /* NewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB4764290A26CF0076630E /* NewService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +30,17 @@
 		ACEB4742290A242E0076630E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ACEB4744290A242F0076630E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACEB4747290A242F0076630E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ACEB474F290A24950076630E /* Khach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Khach.swift; sourceTree = "<group>"; };
+		ACEB4751290A24F30076630E /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		ACEB4753290A25290076630E /* KhachData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KhachData.swift; sourceTree = "<group>"; };
+		ACEB4755290A254D0076630E /* Technician.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Technician.swift; sourceTree = "<group>"; };
+		ACEB4758290A25CC0076630E /* ClientList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientList.swift; sourceTree = "<group>"; };
+		ACEB475A290A26140076630E /* XapSep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XapSep.swift; sourceTree = "<group>"; };
+		ACEB475C290A26330076630E /* ClientEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientEdit.swift; sourceTree = "<group>"; };
+		ACEB475E290A265E0076630E /* KhachRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KhachRow.swift; sourceTree = "<group>"; };
+		ACEB4760290A26870076630E /* ClientDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetail.swift; sourceTree = "<group>"; };
+		ACEB4762290A26B20076630E /* ServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceView.swift; sourceTree = "<group>"; };
+		ACEB4764290A26CF0076630E /* NewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +74,8 @@
 			isa = PBXGroup;
 			children = (
 				ACEB4740290A242E0076630E /* DayEarnApp.swift */,
-				ACEB4742290A242E0076630E /* ContentView.swift */,
+				ACEB4757290A25850076630E /* view */,
+				ACEB474E290A24750076630E /* model */,
 				ACEB4744290A242F0076630E /* Assets.xcassets */,
 				ACEB4746290A242F0076630E /* Preview Content */,
 			);
@@ -65,6 +88,32 @@
 				ACEB4747290A242F0076630E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		ACEB474E290A24750076630E /* model */ = {
+			isa = PBXGroup;
+			children = (
+				ACEB474F290A24950076630E /* Khach.swift */,
+				ACEB4753290A25290076630E /* KhachData.swift */,
+				ACEB4755290A254D0076630E /* Technician.swift */,
+				ACEB4751290A24F30076630E /* Service.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		ACEB4757290A25850076630E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				ACEB4742290A242E0076630E /* ContentView.swift */,
+				ACEB4758290A25CC0076630E /* ClientList.swift */,
+				ACEB475A290A26140076630E /* XapSep.swift */,
+				ACEB475C290A26330076630E /* ClientEdit.swift */,
+				ACEB475E290A265E0076630E /* KhachRow.swift */,
+				ACEB4760290A26870076630E /* ClientDetail.swift */,
+				ACEB4762290A26B20076630E /* ServiceView.swift */,
+				ACEB4764290A26CF0076630E /* NewService.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +186,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACEB475F290A265E0076630E /* KhachRow.swift in Sources */,
+				ACEB4761290A26870076630E /* ClientDetail.swift in Sources */,
+				ACEB475B290A26140076630E /* XapSep.swift in Sources */,
+				ACEB475D290A26330076630E /* ClientEdit.swift in Sources */,
+				ACEB4763290A26B20076630E /* ServiceView.swift in Sources */,
 				ACEB4743290A242E0076630E /* ContentView.swift in Sources */,
+				ACEB4752290A24F30076630E /* Service.swift in Sources */,
 				ACEB4741290A242E0076630E /* DayEarnApp.swift in Sources */,
+				ACEB4759290A25CC0076630E /* ClientList.swift in Sources */,
+				ACEB4765290A26CF0076630E /* NewService.swift in Sources */,
+				ACEB4756290A254D0076630E /* Technician.swift in Sources */,
+				ACEB4754290A25290076630E /* KhachData.swift in Sources */,
+				ACEB4750290A24950076630E /* Khach.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
