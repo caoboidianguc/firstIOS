@@ -27,9 +27,6 @@ class KhachData: ObservableObject {
     
     
     
-    
-    
-    
     func load(){
         DispatchQueue.global(qos: .background).async {
             [weak self] in
@@ -63,5 +60,13 @@ class KhachData: ObservableObject {
                 fatalError("khong the ghi vao tap tin")
             }
         }
+    }
+    
+    func delete(_ client: Khach){
+        worker.khach.removeAll { $0.id == client.id}
+    }
+    
+    func clientExisted(_ client: Khach) -> Bool {
+        worker.khach.contains(client)
     }
 }

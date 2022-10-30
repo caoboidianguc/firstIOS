@@ -15,7 +15,7 @@ struct DayEarnApp: App {
             NavigationView {
                 ContentView(worker: $ledger.worker) {
                     ledger.save()
-                }
+                }.environmentObject(ledger)
             }.onAppear {
                 ledger.load()
             }

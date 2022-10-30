@@ -13,16 +13,21 @@ struct ClientList: View {
     @State private var trangMoi = false
     @State private var text = ""
     @State private var listTim: [Khach] = []
+    @EnvironmentObject var khachData: KhachData
+    @State private var existed = false
+    
     var body: some View {
         NavigationView {
             List {
                 ForEach(text == "" ? worker.khach: listTim) { khach in
                     NavigationLink(destination: ClientDetail(worker: $worker, khach: binding(for: khach))){
                         KhachRow(khach: khach)
-                    }
-                }.onDelete{ khach in
-                    withAnimation{
-                        worker.khach.remove(atOffsets: khach)
+                    }.swipeActions {
+                        Button(role: .destructive, action: {
+                            khachData.delete(khach)
+                        }, label: {
+                            Label("Xoa", systemImage: "trash")
+                        })
                     }
                 }
                 
@@ -37,12 +42,16 @@ struct ClientList: View {
             .sheet(isPresented: $trangMoi) {
                 NavigationView {
                     ClientEdit(worker: $worker, client: $newCus)
+                        .alert("Failed to add.", isPresented: $existed, actions: {}, message: {Text("Client existed!")})
                         .navigationBarItems(leading: Button("Cancel"){
                             trangMoi = false
                         }, trailing: Button("Add"){
                             let newClient = Khach(name: newCus.name, sdt: newCus.sdt, desc: newCus.desc ,dvDone: newCus.dvDone)
-                            worker.khach.insert(newClient, at: 0)
-                            trangMoi = false
+                            if khachData.clientExisted(newClient){
+                                existed = true
+                            } else {
+                                khachData.worker.khach.append(newClient)
+                                trangMoi = false}
                         })
                         .onAppear{
                             newCus.name.removeAll()
@@ -64,6 +73,7 @@ struct ClientList_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             ClientList(worker: .constant(quang))
+                .environmentObject(KhachData())
         }
     }
 }
