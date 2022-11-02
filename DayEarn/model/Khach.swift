@@ -11,7 +11,7 @@ import Foundation
 
 struct Khach: Codable, Identifiable, Equatable {
     static func == (lhs: Khach, rhs: Khach) -> Bool {
-        if lhs.name == rhs.name {
+        if lhs.name == rhs.name && lhs.sdt == rhs.sdt {
             return true
         }
         return false
@@ -100,4 +100,6 @@ extension Khach {
         diem = data.diem + 1
         ngay = Date()
     }
+    
+  
 }

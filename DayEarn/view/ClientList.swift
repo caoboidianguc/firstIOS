@@ -13,8 +13,9 @@ struct ClientList: View {
     @State private var trangMoi = false
     @State private var text = ""
     @State private var listTim: [Khach] = []
-    @EnvironmentObject var khachData: KhachData
+    //@EnvironmentObject var khachData: KhachData
     @State private var existed = false
+    @State private var warning = ""
     
     var body: some View {
         NavigationView {
@@ -22,14 +23,20 @@ struct ClientList: View {
                 ForEach(text == "" ? worker.khach: listTim) { khach in
                     NavigationLink(destination: ClientDetail(worker: $worker, khach: binding(for: khach))){
                         KhachRow(khach: khach)
-                    }.swipeActions {
+                    }
+                    .swipeActions {
                         Button(role: .destructive, action: {
-                            khachData.delete(khach)
+                            worker.delete(khach)
                         }, label: {
                             Label("Xoa", systemImage: "trash")
                         })
                     }
                 }
+//                .onDelete {khach in
+//                    withAnimation {
+//                        worker.khach.remove(atOffsets: khach)
+//                    }
+//                }
                 
             }//list
             .searchable(text: $text, placement: .automatic, prompt: "Find Name")
@@ -42,17 +49,19 @@ struct ClientList: View {
             .sheet(isPresented: $trangMoi) {
                 NavigationView {
                     ClientEdit(worker: $worker, client: $newCus)
-                        .alert("Failed to add.", isPresented: $existed, actions: {}, message: {Text("Client existed!")})
+                        .alert("Failed to add.", isPresented: $existed, actions: {}, message: {Text(warning)})
                         .navigationBarItems(leading: Button("Cancel"){
                             trangMoi = false
                         }, trailing: Button("Add"){
                             let newClient = Khach(name: newCus.name, sdt: newCus.sdt, desc: newCus.desc ,dvDone: newCus.dvDone)
-                            if khachData.clientExisted(newClient){
+                            if worker.clientExisted(newClient) {
+                                warning = "Client existed!"
                                 existed = true
                             } else {
-                                khachData.worker.khach.append(newClient)
+                                worker.khach.insert(newClient, at: 0)
                                 trangMoi = false}
                         })
+                        
                         .onAppear{
                             newCus.name.removeAll()
                             newCus.sdt.removeAll()
@@ -73,7 +82,8 @@ struct ClientList_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             ClientList(worker: .constant(quang))
-                .environmentObject(KhachData())
+                //.environmentObject(KhachData())
         }
     }
 }
+// if EnvironmentObject and @binding use same view, it may some error occur like keyboard disappeared

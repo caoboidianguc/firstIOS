@@ -36,4 +36,14 @@ extension Technician {
                                     Service(dichVu: "Dip", gia: 50),
                                     Service(dichVu: "Ombre", gia: 70),
                                     Service(dichVu: "french", gia: 5),
-                                    Service(dichVu: "Nail-Shape", gia: 10)]}
+                                    Service(dichVu: "Nail-Shape", gia: 10)]
+    
+    
+     mutating func delete(_ client: Khach){
+        self.khach.removeAll(where: {$0.id == client.id })
+    }
+    
+    func clientExisted(_ client: Khach) -> Bool {
+        self.khach.contains(client)
+    }
+}
