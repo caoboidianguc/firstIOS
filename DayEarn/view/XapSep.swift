@@ -25,7 +25,7 @@ struct XapSep: View {
                     NavigationLink(destination: ClientDetail(worker: $worker, khach: binding(for: kha))){
                         KhachRow(khach: kha)
                     }
-                }
+                }.navigationTitle("Phu")
             }
             .searchable(text: $text, placement: .automatic, prompt: "Find Name")
             .onChange(of: text){ timTu in

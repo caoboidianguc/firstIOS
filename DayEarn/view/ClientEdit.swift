@@ -30,7 +30,7 @@ struct ClientEdit: View {
         ScrollView {
             VStack {
                 TextField("Name:", text: $client.name)
-                TextField("phone", text: $client.sdt)
+                TextField("Phone Option", text: $client.sdt)
                 TextField("Note:", text: $client.desc)
                 Text(danhmuc)
             }.padding()

@@ -13,7 +13,6 @@ struct ClientList: View {
     @State private var trangMoi = false
     @State private var text = ""
     @State private var listTim: [Khach] = []
-    //@EnvironmentObject var khachData: KhachData
     @State private var existed = false
     @State private var warning = ""
     
@@ -32,18 +31,14 @@ struct ClientList: View {
                         })
                     }
                 }
-//                .onDelete {khach in
-//                    withAnimation {
-//                        worker.khach.remove(atOffsets: khach)
-//                    }
-//                }
                 
             }//list
             .searchable(text: $text, placement: .automatic, prompt: "Find Name")
             .onChange(of: text){name in
                 listTim = worker.khach.filter {$0.name.contains(name)}
             }
-           
+            
+            .navigationTitle("Clients")
             .navigationBarItems(trailing: Button(action: {trangMoi = true },
                                                  label: {Image(systemName: "plus")}))
             .sheet(isPresented: $trangMoi) {
@@ -80,10 +75,7 @@ struct ClientList: View {
 
 struct ClientList_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView {
-            ClientList(worker: .constant(quang))
-                //.environmentObject(KhachData())
-        }
+        ClientList(worker: .constant(quang))
     }
 }
 // if EnvironmentObject and @binding use same view, it may some error occur like keyboard disappeared

@@ -69,4 +69,5 @@ class KhachData: ObservableObject {
     func clientExisted(_ client: Khach) -> Bool {
         worker.khach.contains(client)
     }
+    
 }
