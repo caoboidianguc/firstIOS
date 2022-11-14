@@ -26,24 +26,16 @@ struct ServiceView: View {
                     worker.services.remove(atOffsets: xoa)
                 }
                 .navigationTitle("Services")
+                HStack {
+                    NewService(newSer: $themdv)
+                    Button("Add", action: {
+                        let newSer = Service(dichVu: themdv.dichVu, gia: themdv.gia)
+                        worker.services.append(newSer)
+                    }).disabled(themdv.dichVu.isEmpty)
+                }
             }//list
             
             .listStyle(.plain)
-            .navigationBarItems(leading:
-                                    Button("New"){nutThem = true}
-            )
-            .sheet(isPresented: $nutThem) {
-                NavigationView {
-                    NewService(newSer: $themdv)
-                        .navigationBarItems(leading: Button("Cancel"){
-                            nutThem = false
-                        }, trailing: Button("Add"){
-                            let dv = Service(dichVu: themdv.dichVu, gia: themdv.gia)
-                            worker.services.append(dv)
-                            nutThem = false
-                        })
-                }
-        }
         }
         
     }

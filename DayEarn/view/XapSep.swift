@@ -10,27 +10,40 @@ import SwiftUI
 struct XapSep: View {
     @Binding var worker: Technician
     @State private var khong: Bool = false
-    var xap: [Khach] {
-        worker.khach.sorted(by: {$0.name < $1.name || !khong})
-    }
-    
-    @State private var text = ""
-    @State private var listDaTim: [Khach] = []
     
     var body: some View {
         NavigationView {
             List {
-                Toggle("Sort by name", isOn: $khong)
-                ForEach(text == "" ? xap : listDaTim){ kha in
-                    NavigationLink(destination: ClientDetail(worker: $worker, khach: binding(for: kha))){
-                        KhachRow(khach: kha)
+                Section(header: Text("Today")){
+                    Label("\(tongNgay())", systemImage: "bitcoinsign")
+                        .foregroundColor(tongNgay() == 0 ? .gray : .green)
+                }
+                Section(header: Text("last seven day")){
+                    HStack {
+                        Label("\(worker.tongTuan())", systemImage: "bitcoinsign")
+                            .foregroundColor(worker.tongTuan() > 1500 ? .purple : .green )
+                        Spacer()
+                        Button(action: {
+                            let newWeek = WeekEarn(tuan: "\(Date.now.formatted(date: .numeric, time: .omitted))", earn: worker.tongTuan())
+                            worker.weekEarn.insert(newWeek, at: 0)
+                        }, label:{Image(systemName: "tray.and.arrow.down")})
                     }
-                }.navigationTitle("Phu")
+                }
+                Section(header: Text("week were saved")){
+                    ForEach(worker.weekEarn) { tuan in
+                        HStack {
+                            Text(tuan.tuan)
+                            Spacer()
+                            Text("$\(tuan.earn)")
+                        }
+                    }.onDelete {tuan in
+                        worker.weekEarn.remove(atOffsets: tuan)
+                    }
+                }
+
             }
-            .searchable(text: $text, placement: .automatic, prompt: "Find Name")
-            .onChange(of: text){ timTu in
-                listDaTim = worker.khach.filter{$0.name.contains(timTu)}
-        }
+            .navigationTitle("Summary!")
+            
         }
     }//body
     private func binding(for khachIndex: Khach) -> Binding<Khach> {
@@ -38,6 +51,15 @@ struct XapSep: View {
         return $worker.khach[clientIndex]
     }
     
+    func tongNgay() -> Int {
+        var tong = 0
+        for lan in worker.khach {
+            if lan.today {
+                tong += lan.khachTra()
+            }
+        }
+        return tong
+    }
 }
 
 struct XapSep_Previews: PreviewProvider {
@@ -45,3 +67,4 @@ struct XapSep_Previews: PreviewProvider {
         XapSep(worker: .constant(quang))
     }
 }
+

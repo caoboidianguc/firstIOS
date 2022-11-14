@@ -13,6 +13,7 @@ struct Technician: Codable {
     let name: String
     var services: [Service]
     var khach: [Khach]
+    var weekEarn: [WeekEarn] = []
     init(name: String, services:[Service] = dvTech , khach:[Khach] = []){
         self.name = name
         self.services = services
@@ -46,4 +47,16 @@ extension Technician {
     func clientExisted(_ client: Khach) -> Bool {
         self.khach.contains(client)
     }
+    
+    func tongTuan() -> Int {
+        var tong = 0
+        for client in khach {
+            if client.week {
+                tong += client.khachTra()
+            }
+        }
+        return tong
+    }
+    
+    
 }

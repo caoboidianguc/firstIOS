@@ -36,7 +36,7 @@ struct ContentView: View {
                 
                 XapSep(worker: $worker)
                     .tabItem{
-                        Label("Search", systemImage: "magnifyingglass")
+                        Label("Earns", systemImage: "dongsign")
                     }
                     .tag(chon.xep)
                 
