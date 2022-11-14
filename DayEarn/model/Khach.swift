@@ -43,12 +43,22 @@ struct Khach: Codable, Identifiable, Equatable {
         }
         return tongChi
     }
+    var today: Bool {
+        ngay.formatted(date: .numeric, time: .omitted) == Date().formatted(date: .numeric, time: .omitted)
+    }
+    var week: Bool {
+        ngay.tuan > Date.now
+    }
+    var haiTuan: Bool {
+        ngay.quaHaiTuan > Date.now
+    }
+    
 }
 
 let khachmau = [Khach(name: "hibi", sdt: "7642",dvDone:[Service(dichVu: "Full", gia: 50)]),
                 Khach(name: "Jubi", sdt: "8775", dvDone:[Service(dichVu: "talk", gia: 60)]),
-                Khach(name: "Linh", sdt: "8775", dvDone:[Service(dichVu: "read", gia: 70)]),
-                Khach(name: "Quang", sdt: "9070", dvDone:[Service(dichVu: "gaming", gia: 40)])]
+                Khach(name: "Linh", sdt: "8775", dvDone:[Service(dichVu: "read", gia: 70)], ngay: Date.from(year: 2022, month: 10, day:27)),
+                Khach(name: "Quang", sdt: "9070", dvDone:[Service(dichVu: "gaming", gia: 40)], ngay: Date.from(year: 2022, month: 11, day:3))]
 
 extension Khach {
     struct ThemKhach {
@@ -102,4 +112,23 @@ extension Khach {
     }
     
   
+}
+
+
+extension Date {
+    var tuan: Date {
+        Calendar.autoupdatingCurrent.date(byAdding: .day, value: 7, to: self) ?? self
+    }
+    var quaHaiTuan: Date {
+        Calendar.autoupdatingCurrent.date(byAdding: .day, value: 21, to: self) ?? self
+    }
+    static func from(year: Int, month: Int, day: Int) -> Date {
+        let gregorianCalendar = NSCalendar(calendarIdentifier: .gregorian)!
+        var dateCompo = DateComponents()
+        dateCompo.year = year
+        dateCompo.month = month
+        dateCompo.day = day
+        let date = gregorianCalendar.date(from: dateCompo)!
+        return date
+    }
 }

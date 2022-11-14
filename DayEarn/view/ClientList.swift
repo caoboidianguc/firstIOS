@@ -15,20 +15,25 @@ struct ClientList: View {
     @State private var listTim: [Khach] = []
     @State private var existed = false
     @State private var warning = ""
-    
+    var khachList: [Khach] {
+        worker.khach.sorted(by: {$0.ngay > $1.ngay})
+    }
     var body: some View {
         NavigationView {
             List {
-                ForEach(text == "" ? worker.khach: listTim) { khach in
-                    NavigationLink(destination: ClientDetail(worker: $worker, khach: binding(for: khach))){
-                        KhachRow(khach: khach)
-                    }
-                    .swipeActions {
-                        Button(role: .destructive, action: {
-                            worker.delete(khach)
-                        }, label: {
-                            Label("Xoa", systemImage: "trash")
-                        })
+                ForEach(text == "" ? khachList : listTim) { khach in
+                    if khach.haiTuan {
+                        NavigationLink(destination: ClientDetail(worker: $worker, khach: binding(for: khach))){
+                            KhachRow(khach: khach)
+                        }
+                        .swipeActions {
+                            Button(role: .destructive, action: {
+                                worker.delete(khach)
+                            }, label: {
+                                Label("Xoa", systemImage: "trash")
+                            })
+                        }
+                        
                     }
                 }
                 
@@ -39,6 +44,7 @@ struct ClientList: View {
             }
             
             .navigationTitle("Clients")
+            
             .navigationBarItems(trailing: Button(action: {trangMoi = true },
                                                  label: {Image(systemName: "plus")}))
             .sheet(isPresented: $trangMoi) {
