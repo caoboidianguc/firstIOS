@@ -14,22 +14,26 @@ struct XapSep: View {
     var body: some View {
         NavigationView {
             List {
-                Section(header: Text("Today")){
-                    Label("\(tongNgay())", systemImage: "bitcoinsign")
-                        .foregroundColor(tongNgay() == 0 ? .gray : .green)
+                HStack {
+                    Text("Total:")
+                    Spacer()
+                    Text("\(worker.tinhTheoNgay())")
+                        .foregroundColor(worker.tinhTheoNgay() > 2000 ? .purple : .primary)
                 }
-                Section(header: Text("last seven day")){
+                Section(header: Text("Today")){
                     HStack {
-                        Label("\(worker.tongTuan())", systemImage: "bitcoinsign")
-                            .foregroundColor(worker.tongTuan() > 1500 ? .purple : .green )
+                        Label("\(worker.tongNgay())", systemImage: "bitcoinsign")
+                            .foregroundColor(worker.tongNgay() == 0 ? .gray : .green)
                         Spacer()
                         Button(action: {
-                            let newWeek = WeekEarn(tuan: "\(Date.now.formatted(date: .numeric, time: .omitted))", earn: worker.tongTuan())
+                            let newWeek = WeekEarn(tuan: "\(Date.now.formatted(date: .numeric, time: .omitted))", earn: worker.tongNgay())
                             worker.weekEarn.insert(newWeek, at: 0)
-                        }, label:{Image(systemName: "tray.and.arrow.down")})
+                            khong = true
+                        }, label:{Image(systemName: "tray.and.arrow.down")}).disabled(khong)
                     }
                 }
-                Section(header: Text("week were saved")){
+                
+                Section(header: Text("DAYS WERE SAVED")){
                     ForEach(worker.weekEarn) { tuan in
                         HStack {
                             Text(tuan.tuan)
@@ -43,6 +47,9 @@ struct XapSep: View {
 
             }
             .navigationTitle("Summary!")
+            .navigationBarItems(leading: Button("Reset"){
+                worker.weekEarn.removeAll()
+            })
             
         }
     }//body
@@ -51,15 +58,6 @@ struct XapSep: View {
         return $worker.khach[clientIndex]
     }
     
-    func tongNgay() -> Int {
-        var tong = 0
-        for lan in worker.khach {
-            if lan.today {
-                tong += lan.khachTra()
-            }
-        }
-        return tong
-    }
 }
 
 struct XapSep_Previews: PreviewProvider {

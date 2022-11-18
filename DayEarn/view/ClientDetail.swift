@@ -39,7 +39,7 @@ struct ClientDetail: View {
                 Text("Note: \(khach.desc)")
                 Text("Time visited: \(khach.diem)")
                 Text("Total: $\(khach.khachTra())")
-            }
+            }.padding(5)
             
             Button("Delete This Client"){
                 xoa = true

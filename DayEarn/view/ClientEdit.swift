@@ -12,19 +12,19 @@ struct ClientEdit: View {
     @Binding var worker: Technician
     @Binding var client: Khach.ThemKhach
     @State var newSer = Service.themDv()
-    var cotGrid: [GridItem] = [GridItem(spacing:5, alignment: .center),
-                               GridItem(spacing:5, alignment: .center),
-                               GridItem(spacing:5, alignment: .center)]
-    var dichvu: [String] {
-        var ds: [String] = []
-        for ser in client.dvDone {
-            ds.append(ser.dichVu)
-        }
-        return ds
-    }
-    var danhmuc: String {
-        ListFormatter.localizedString(byJoining: dichvu)
-    }
+//    var cotGrid: [GridItem] = [GridItem(spacing:5, alignment: .center),
+//                               GridItem(spacing:5, alignment: .center),
+//                               GridItem(spacing:5, alignment: .center)]
+//    var dichvu: [String] {
+//        var ds: [String] = []
+//        for ser in client.dvDone {
+//            ds.append(ser.dichVu)
+//        }
+//        return ds
+//    }
+//    var danhmuc: String {
+//        ListFormatter.localizedString(byJoining: dichvu)
+//    }
     
     var body: some View {
         ScrollView {
@@ -32,22 +32,10 @@ struct ClientEdit: View {
                 TextField("Name:", text: $client.name)
                 TextField("Phone Option", text: $client.sdt)
                 TextField("Note:", text: $client.desc)
-                Text(danhmuc)
+                //Text(danhmuc)
             }.padding()
             
-            LazyVGrid (columns: cotGrid,alignment: .center, spacing: 5, content: {
-                ForEach(worker.services){serv in
-                    Button(action: {
-                        client.dvDone.append(serv)
-                    }, label: {
-                        VStack {
-                        Text(serv.dichVu)
-                        Text("$\(serv.gia)")
-                        }.padding()
-                                
-                    })
-                }
-            })
+            ChonDichVu(client: $client)
             HStack {
                 NewService(newSer: $newSer)
                 Button("Add Service", action: {
@@ -67,6 +55,7 @@ struct ClientEdit: View {
 struct ClientEdit_Previews: PreviewProvider {
     static var previews: some View {
         ClientEdit(worker: .constant(quang),client: .constant(khachmau[0].mau))
+            .environmentObject(KhachData())
             
     }
 }

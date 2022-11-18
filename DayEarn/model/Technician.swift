@@ -48,15 +48,44 @@ extension Technician {
         self.khach.contains(client)
     }
     
-    func tongTuan() -> Int {
+    func tongNgay() -> Int {
         var tong = 0
-        for client in khach {
-            if client.week {
-                tong += client.khachTra()
+        for lan in khach {
+            if lan.today {
+                tong += lan.khachTra()
             }
         }
         return tong
     }
     
+    func tinhTheoNgay() -> Int {
+        var tong = 0
+        for ngay in weekEarn {
+            tong += ngay.earn
+        }
+        return tong
+    }
     
+    func tuan(quaTuan: QuaTuan) -> [Khach] {
+        self.khach.filter {
+            switch quaTuan {
+            case .tuan:
+                return $0.haiNgay
+            case .nuaThang:
+                return $0.overTuan
+            case .xaxoi:
+                return $0.xahon
+            }
+        }.sorted(by: {$0.ngay < $1.ngay})
+        
+    }
+}
+
+enum QuaTuan: String, CaseIterable, Identifiable {
+    case tuan = "Comming up"
+    case nuaThang = "Within 7 days"
+    case xaxoi = "Over week"
+    
+    var id: String {self.rawValue}
+    var name: String {self.rawValue}
 }

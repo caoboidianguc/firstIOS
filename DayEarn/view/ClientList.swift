@@ -22,7 +22,7 @@ struct ClientList: View {
         NavigationView {
             List {
                 ForEach(text == "" ? khachList : listTim) { khach in
-                    if khach.haiTuan {
+                    if khach.trongTuan {
                         NavigationLink(destination: ClientDetail(worker: $worker, khach: binding(for: khach))){
                             KhachRow(khach: khach)
                         }

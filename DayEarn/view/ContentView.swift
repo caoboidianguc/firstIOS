@@ -14,6 +14,7 @@ struct ContentView: View {
     @Environment(\.scenePhase) private var scenePhase
     @State private var manhinh: chon = .khach
     enum chon {
+        case schedule
         case khach
         case dv
         case xep
@@ -21,6 +22,11 @@ struct ContentView: View {
     
     var body: some View {
             TabView(selection: $manhinh) {
+                ScheduleView(worker: $worker)
+                    .tabItem {
+                        Label("Schedule", systemImage: "calendar.badge.clock")
+                    }
+                    .tag(chon.schedule)
                 ClientList(worker: $worker)
                     .tabItem {
                         Label("Clients", systemImage: "person.text.rectangle")
@@ -36,7 +42,7 @@ struct ContentView: View {
                 
                 XapSep(worker: $worker)
                     .tabItem{
-                        Label("Earns", systemImage: "dongsign")
+                        Label("Earns", systemImage: "scroll")
                     }
                     .tag(chon.xep)
                 
