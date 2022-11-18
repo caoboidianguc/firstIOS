@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import SwiftUI
 
 
 class KhachData: ObservableObject {
@@ -70,4 +70,8 @@ class KhachData: ObservableObject {
         worker.khach.contains(client)
     }
     
+    
+    
 }
+
+

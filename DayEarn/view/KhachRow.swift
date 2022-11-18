@@ -20,8 +20,8 @@ struct KhachRow: View {
             .foregroundColor(khach.today ? .green : .gray)
             
             Text(khach.ngay, style: .date)
-                .font(.footnote)
-                .foregroundColor(.secondary)
+                .font(khach.schedule ? .title3 : .footnote)
+                .foregroundColor(khach.schedule ? .purple : .secondary)
         }.padding(6)
            
     }
