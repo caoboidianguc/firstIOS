@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import SwiftUI
 
 
 struct Khach: Codable, Identifiable, Equatable {
@@ -66,11 +66,12 @@ struct Khach: Codable, Identifiable, Equatable {
         !honTuan && !schedule
     }
     
+    
 }
 
 let khachmau = [Khach(name: "hibi", sdt: "7642",dvDone:[Service(dichVu: "Full", gia: 50)]),
                 Khach(name: "Jubi", sdt: "8775", dvDone:[Service(dichVu: "talk", gia: 60)], ngay: Date.from(year: 2022, month: 11, day:21)),
-                Khach(name: "Linh", sdt: "8775", dvDone:[Service(dichVu: "read", gia: 70)], ngay: Date.from(year: 2022, month: 8, day:17)),
+                Khach(name: "Linh", sdt: "8775", dvDone:[Service(dichVu: "read", gia: 70)], ngay: Date.from(year: 2022, month: 11, day:11)),
                 Khach(name: "Quang", sdt: "9070", dvDone:[Service(dichVu: "gaming", gia: 40)], ngay: Date.from(year: 2022, month: 11, day:3))]
 
 extension Khach {
@@ -112,7 +113,7 @@ extension Khach {
         dvDone = data.dvDone
         services = data.services
         diem = data.diem
-        ngay = Date()
+        ngay = data.ngay
     }
     mutating func updateDiem(tu data: ThemKhach){
         name = data.name
@@ -121,7 +122,7 @@ extension Khach {
         dvDone = data.dvDone
         services = data.services
         diem = data.diem + 1
-        ngay = Date()
+        ngay = data.ngay
     }
     
   

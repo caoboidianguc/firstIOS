@@ -28,6 +28,7 @@ struct ScheduleView: View {
                     
                 }
             }
+            .listStyle(.plain)
             .navigationTitle("Schedule")
                 .navigationBarItems(trailing:
                     Button("Add"){

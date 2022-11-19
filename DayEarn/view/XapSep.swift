@@ -29,8 +29,8 @@ struct XapSep: View {
                             let newWeek = WeekEarn(tuan: "\(Date.now.formatted(date: .numeric, time: .omitted))", earn: worker.tongNgay())
                             worker.weekEarn.insert(newWeek, at: 0)
                             khong = true
-                        }, label:{Image(systemName: "tray.and.arrow.down")}).disabled(khong)
-                    }
+                        }, label:{Image(systemName: "tray.and.arrow.down")})
+                    }.alert("Today have saved", isPresented: $khong, actions: {})
                 }
                 
                 Section(header: Text("DAYS WERE SAVED")){
