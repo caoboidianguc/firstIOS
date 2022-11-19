@@ -25,7 +25,7 @@ struct KhachRow: View {
                     Text(khach.sdt)
                 }
                 
-                Text(khach.ngay, style: .date)
+                Text(khach.honTuan ? khach.ngay.formatted(.dateTime.month().day().weekday(.wide)) : khach.ngay.formatted(.dateTime.day().weekday(.wide)))
                     .font(khach.schedule ? .title3 : .footnote)
                     .foregroundColor(khach.schedule ? .purple : .secondary)
             }
