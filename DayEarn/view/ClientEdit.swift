@@ -12,19 +12,7 @@ struct ClientEdit: View {
     @Binding var worker: Technician
     @Binding var client: Khach.ThemKhach
     @State var newSer = Service.themDv()
-//    var cotGrid: [GridItem] = [GridItem(spacing:5, alignment: .center),
-//                               GridItem(spacing:5, alignment: .center),
-//                               GridItem(spacing:5, alignment: .center)]
-//    var dichvu: [String] {
-//        var ds: [String] = []
-//        for ser in client.dvDone {
-//            ds.append(ser.dichVu)
-//        }
-//        return ds
-//    }
-//    var danhmuc: String {
-//        ListFormatter.localizedString(byJoining: dichvu)
-//    }
+
     
     var body: some View {
         ScrollView {
@@ -32,7 +20,8 @@ struct ClientEdit: View {
                 TextField("Name:", text: $client.name)
                 TextField("Phone Option", text: $client.sdt)
                 TextField("Note:", text: $client.desc)
-                //Text(danhmuc)
+                DatePicker("IPick", selection: $client.ngay)
+                    .datePickerStyle(.compact)
             }.padding()
             
             ChonDichVu(client: $client)
