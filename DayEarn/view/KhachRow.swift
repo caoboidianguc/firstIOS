@@ -11,8 +11,13 @@ struct KhachRow: View {
     var khach: Khach
     
     var mauChon: [Color] = [
-        .green,.purple,.accentColor,.black,.blue,.brown,.cyan,.indigo,.mint,.orange,.pink,.red,.teal,.yellow]
-    
+        .green,.purple,.accentColor,.blue,.brown,.cyan,.indigo,.mint,.orange,.pink,.red,.teal,.yellow]
+//    var mauNgau: Color {
+//        let red: Double = CGFloat.random(in: 0...1)
+//        let green: Double = CGFloat.random(in: 0...1)
+//        let blue: Double = CGFloat.random(in: 0...1)
+//        return Color(red: red, green: green, blue: blue)
+//    }
     var body: some View {
         HStack {
             Image(systemName: "person")

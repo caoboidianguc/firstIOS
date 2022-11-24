@@ -12,7 +12,7 @@ struct ChonNgay: View {
     var body: some View {
         NavigationView {
             ScrollView {
-                Section(header: Text("Let us know you name!") ){
+                Section(header: Text("Your Client !") ){
                     VStack {
                         TextField("Your Name", text: $client.name)
                         TextField("Phone - opt", text: $client.sdt)

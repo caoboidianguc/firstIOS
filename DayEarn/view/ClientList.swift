@@ -11,17 +11,16 @@ struct ClientList: View {
     @Binding var worker: Technician
     @State var newCus = Khach.ThemKhach()
     @State private var trangMoi = false
-    @State private var text = ""
-    @State private var listTim: [Khach] = []
     @State private var existed = false
     @State private var warning = ""
     var khachList: [Khach] {
         worker.khach.sorted(by: {$0.ngay > $1.ngay})
     }
+    
     var body: some View {
         NavigationView {
             List {
-                ForEach(text == "" ? khachList : listTim) { khach in
+                ForEach(khachList) { khach in
                     if khach.trongTuan {
                         NavigationLink(destination: ClientDetail(worker: $worker, khach: binding(for: khach))){
                             KhachRow(khach: khach)
@@ -33,24 +32,20 @@ struct ClientList: View {
                                 Label("Xoa", systemImage: "trash")
                             })
                         }
-                        
                     }
                 }
                 
             }//list
             .listStyle(.plain)
-            .searchable(text: $text, placement: .automatic, prompt: "Find Name")
-            .onChange(of: text){name in
-                listTim = worker.khach.filter {$0.name.contains(name)}
-            }
+            
 
-            .navigationTitle("Clients")
+            .navigationTitle("Clients Week")
             
             .navigationBarItems(trailing: Button(action: {trangMoi = true },
                                                  label: {Image(systemName: "plus")}))
             .sheet(isPresented: $trangMoi) {
                 NavigationView {
-                    ClientEdit(worker: $worker, client: $newCus)
+                    AddClient(worker: $worker, client: $newCus)
                         .alert("Failed to add.", isPresented: $existed, actions: {}, message: {Text(warning)})
                         .navigationBarItems(leading: Button("Cancel"){
                             trangMoi = false

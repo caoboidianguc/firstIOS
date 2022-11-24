@@ -11,6 +11,7 @@ struct ScheduleView: View {
     @Binding var worker: Technician
     @State private var addClient = false
     @State private var khachHen = Khach.ThemKhach()
+    @State private var daCo = false
     
     var body: some View {
         NavigationView {
@@ -38,12 +39,16 @@ struct ScheduleView: View {
                 .sheet(isPresented: $addClient){
                     NavigationView {
                         ChonNgay(client: $khachHen)
+                            .alert("Client in your list", isPresented: $daCo, actions: {})
                             .navigationBarItems(leading: Button("Cancel") {
                                 addClient = false
                             }, trailing: Button("Add"){
                                 let newApp = Khach(name: khachHen.name, sdt: khachHen.sdt,dvDone: khachHen.dvDone, ngay: khachHen.ngay)
-                                worker.khach.append(newApp)
-                                addClient = false
+                                if worker.clientExisted(newApp) {
+                                    daCo = true
+                                } else {
+                                    worker.khach.append(newApp)
+                                    addClient = false }
                             })
                             .onAppear {
                                 khachHen.dvDone.removeAll()
