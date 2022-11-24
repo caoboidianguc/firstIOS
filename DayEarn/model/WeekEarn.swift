@@ -2,10 +2,11 @@
 //  WeekEarn.swift
 //  DayEarn
 //
-//  Created by Thong Vu on 11/13/22.
+//  Created by Thong Vu on 11/24/22.
 //
 
 import Foundation
+
 
 struct WeekEarn: Codable, Identifiable {
     var id: UUID

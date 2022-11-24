@@ -2,11 +2,10 @@
 //  Khach.swift
 //  DayEarn
 //
-//  Created by Thong Vu on 10/26/22.
+//  Created by Thong Vu on 11/24/22.
 //
 
 import Foundation
-import SwiftUI
 
 
 struct Khach: Codable, Identifiable, Equatable {
