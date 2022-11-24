@@ -12,11 +12,9 @@ struct DayEarnApp: App {
     @StateObject var ledger = KhachData()
     var body: some Scene {
         WindowGroup {
-            //NavigationView {
                 ContentView(worker: $ledger.worker) {
                     ledger.save()
                 }.environmentObject(ledger)
-            //}
                 .onAppear {
                     ledger.load()
                 }
