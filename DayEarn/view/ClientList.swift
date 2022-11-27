@@ -16,12 +16,13 @@ struct ClientList: View {
     var khachList: [Khach] {
         worker.khach.sorted(by: {$0.ngay > $1.ngay})
     }
-    
+    @State private var text = ""
+    @State private var listTim: [Khach] = []
     var body: some View {
         NavigationView {
             List {
-                ForEach(khachList) { khach in
-                    if khach.trongTuan {
+                ForEach(text == "" ? khachList : listTim) { khach in
+                    if !khach.schedule {
                         NavigationLink(destination: ClientDetail(worker: $worker, khach: binding(for: khach))){
                             KhachRow(khach: khach)
                         }
@@ -32,14 +33,17 @@ struct ClientList: View {
                                 Label("Xoa", systemImage: "trash")
                             })
                         }
+
                     }
                 }
                 
             }//list
             .listStyle(.plain)
-            
-
-            .navigationTitle("Clients Week")
+            .searchable(text: $text, placement: .automatic, prompt: "Client's Name")
+            .onChange(of: text){name in
+                listTim = worker.khach.filter {$0.name.contains(name)}
+            }
+            .navigationTitle("\(khachList.count) Clients")
             
             .navigationBarItems(trailing: Button(action: {trangMoi = true },
                                                  label: {Image(systemName: "plus")}))
