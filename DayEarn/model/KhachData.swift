@@ -25,8 +25,6 @@ class KhachData: ObservableObject {
     //@Published var khachData: [Khach] = []
     @Published var worker: Technician = Technician(name: "Quang")
     
-    
-    
     func load(){
         DispatchQueue.global(qos: .background).async {
             [weak self] in

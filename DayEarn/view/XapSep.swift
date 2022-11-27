@@ -11,16 +11,10 @@ struct XapSep: View {
     @Binding var worker: Technician
     @State private var khong: Bool = false
     @State private var resetWarning = false
-    @State private var text = ""
-    @State private var listTim: [Khach] = []
+    
     var body: some View {
         NavigationView {
             List {
-                ForEach(listTim){ khach in
-                    NavigationLink(destination: ClientDetail(worker: $worker, khach: binding(for: khach))){
-                        KhachRow(khach: khach)
-                    }
-                }
                 HStack {
                     Text("Total:")
                     Spacer()
@@ -54,10 +48,7 @@ struct XapSep: View {
 
             }
             .navigationTitle("Summary!")
-            .searchable(text: $text, placement: .automatic, prompt: "Client's Name")
-            .onChange(of: text){name in
-                listTim = worker.khach.filter {$0.name.contains(name)}
-            }
+            
             .navigationBarItems(leading: Button("Reset"){
                 resetWarning = true
             })

@@ -68,10 +68,7 @@ struct Khach: Codable, Identifiable, Equatable {
     
 }
 
-let khachmau = [Khach(name: "hibi", sdt: "7642",dvDone:[Service(dichVu: "Full", gia: 50)]),
-                Khach(name: "Jubi", sdt: "8775", dvDone:[Service(dichVu: "talk", gia: 60)], ngay: Date.from(year: 2022, month: 11, day:21)),
-                Khach(name: "Linh", sdt: "8775", dvDone:[Service(dichVu: "read", gia: 70)], ngay: Date.from(year: 2022, month: 11, day:11)),
-                Khach(name: "Quang", sdt: "9070", dvDone:[Service(dichVu: "gaming", gia: 40)], ngay: Date.from(year: 2022, month: 11, day:3))]
+let khachmau = [Khach(name: "Jubi", sdt: "8775", dvDone:[Service(dichVu: "talk", gia: 60)], ngay: Date.from(year: 2022, month: 11, day:21))]
 
 extension Khach {
     struct ThemKhach {
@@ -89,21 +86,7 @@ extension Khach {
         
     }
     
-    static var dvmau = [Service(dichVu: "Full set", gia: 60),
-                        Service(dichVu: "GelPed", gia: 60),
-                        Service(dichVu: "Combo Gel", gia: 105),
-                        Service(dichVu: "Fill in", gia: 50),
-                        Service(dichVu: "Pedicure", gia: 45),
-                        Service(dichVu: "Gel mani", gia: 45),
-                        Service(dichVu: "Gel Add", gia: 15),
-                        Service(dichVu: "Combo Reg", gia: 70),
-                        Service(dichVu: "Nature Retreat", gia: 55),
-                        Service(dichVu: "Brisa Detox", gia: 70),
-                        Service(dichVu: "Ultimate", gia: 90),
-                        Service(dichVu: "Dip", gia: 50),
-                        Service(dichVu: "Ombre", gia: 70),
-                        Service(dichVu: "french", gia: 5),
-                        Service(dichVu: "Nail-Shape", gia: 10)]
+    static var dvmau = [Service(dichVu: "Full set", gia: 60)]
     
     mutating func update(tu data: ThemKhach){
         name = data.name
