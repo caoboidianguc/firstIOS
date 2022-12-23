@@ -66,6 +66,9 @@ extension Technician {
         
     }
     
+    func listDaTim(ten: String) -> [Khach] {
+        self.khach.filter { $0.name.contains(ten)}
+    }
 }
 
 enum QuaTuan: String, CaseIterable, Identifiable {

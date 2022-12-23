@@ -12,7 +12,7 @@ struct NewService: View {
     var body: some View {
         VStack {
             TextField("SerVice" , text: $newSer.dichVu)
-            TextField("Price" , value: $newSer.gia, formatter: NumberFormatter())
+            TextField("Price" , value: $newSer.gia, formatter: NumberFormatter()).keyboardType(.numberPad)
         }.padding()
             .onAppear{
                 newSer.dichVu.removeAll()

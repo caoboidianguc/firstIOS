@@ -58,7 +58,7 @@ struct ClientDetail: View {
             .fullScreenCover(isPresented: $suadoi) {
                 NavigationView {
                     ClientEdit(worker: $worker, client: $updateKhach)
-                        .navigationBarItems(leading: Button("Huy"){
+                        .navigationBarItems(leading: Button("Cancel"){
                             suadoi = false
                         }, trailing: Button("Update"){
                             if khach.dvDone.isEmpty {
