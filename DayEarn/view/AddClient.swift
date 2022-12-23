@@ -16,8 +16,8 @@ struct AddClient: View {
     var body: some View {
         ScrollView {
             VStack {
-                TextField("Name:", text: $client.name)
-                TextField("Phone Option", text: $client.sdt)
+                TextField("Name:", text: $client.name).textInputAutocapitalization(.words)
+                TextField("Phone Option", text: $client.sdt).keyboardType(.numberPad)
                 TextField("Note:", text: $client.desc)
             }.padding()
             

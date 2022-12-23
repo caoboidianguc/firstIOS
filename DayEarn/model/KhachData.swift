@@ -61,14 +61,14 @@ class KhachData: ObservableObject {
     }
     
     func delete(_ client: Khach){
-        worker.khach.removeAll { $0.id == client.id}
+        worker.khach.removeAll(where: { $0.id == client.id}) 
     }
     
     func clientExisted(_ client: Khach) -> Bool {
         worker.khach.contains(client)
     }
     
-    
+   
     
 }
 

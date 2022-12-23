@@ -21,7 +21,7 @@ struct ClientList: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(text == "" ? khachList : listTim) { khach in
+                ForEach(text == "" ? khachList : worker.listDaTim(ten: text)) { khach in
                     if !khach.schedule {
                         NavigationLink(destination: ClientDetail(worker: $worker, khach: binding(for: khach))){
                             KhachRow(khach: khach)
@@ -37,12 +37,13 @@ struct ClientList: View {
                     }
                 }
                 
+                
             }//list
             .listStyle(.plain)
             .searchable(text: $text, placement: .automatic, prompt: "Client's Name")
-            .onChange(of: text){name in
-                listTim = worker.khach.filter {$0.name.contains(name)}
-            }
+//            .onChange(of: text){name in
+//                listTim = worker.khach.filter {$0.name.contains(name)}
+//            }
             .navigationTitle("\(khachList.count) Clients")
             
             .navigationBarItems(trailing: Button(action: {trangMoi = true },
