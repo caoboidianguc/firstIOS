@@ -20,7 +20,7 @@ struct ClientDetail: View {
                 HStack {
                     Text(khach.name)
                     Spacer()
-                    Text(khach.sdt)
+                    Link(destination: URL(string: "tel:\(khach.sdt)")!, label: {Text(khach.sdt)})
                 }
             }.padding(8)
             Section(header: Text("Service:")) {

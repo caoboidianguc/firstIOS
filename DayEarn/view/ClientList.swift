@@ -40,11 +40,11 @@ struct ClientList: View {
                 
             }//list
             .listStyle(.plain)
-            .searchable(text: $text, placement: .automatic, prompt: "Client's Name")
+            .searchable(text: $text, placement: .automatic, prompt: "Name in \(khachList.count)")
 //            .onChange(of: text){name in
 //                listTim = worker.khach.filter {$0.name.contains(name)}
 //            }
-            .navigationTitle("\(khachList.count) Clients")
+            .navigationTitle("Clients")
             
             .navigationBarItems(trailing: Button(action: {trangMoi = true },
                                                  label: {Image(systemName: "plus")}))

@@ -7,44 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ACEB4741290A242E0076630E /* DayEarnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB4740290A242E0076630E /* DayEarnApp.swift */; };
-		ACEB4743290A242E0076630E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB4742290A242E0076630E /* ContentView.swift */; };
-		ACEB4745290A242F0076630E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACEB4744290A242F0076630E /* Assets.xcassets */; };
-		ACEB4748290A242F0076630E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACEB4747290A242F0076630E /* Preview Assets.xcassets */; };
-		ACEB4750290A24950076630E /* Khach.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB474F290A24950076630E /* Khach.swift */; };
-		ACEB4752290A24F30076630E /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB4751290A24F30076630E /* Service.swift */; };
-		ACEB4754290A25290076630E /* KhachData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB4753290A25290076630E /* KhachData.swift */; };
-		ACEB4756290A254D0076630E /* Technician.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB4755290A254D0076630E /* Technician.swift */; };
-		ACEB4759290A25CC0076630E /* ClientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB4758290A25CC0076630E /* ClientList.swift */; };
-		ACEB475B290A26140076630E /* XapSep.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB475A290A26140076630E /* XapSep.swift */; };
-		ACEB475D290A26330076630E /* ClientEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB475C290A26330076630E /* ClientEdit.swift */; };
-		ACEB475F290A265E0076630E /* KhachRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB475E290A265E0076630E /* KhachRow.swift */; };
-		ACEB4761290A26870076630E /* ClientDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB4760290A26870076630E /* ClientDetail.swift */; };
-		ACEB4763290A26B20076630E /* ServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB4762290A26B20076630E /* ServiceView.swift */; };
-		ACEB4765290A26CF0076630E /* NewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACEB4764290A26CF0076630E /* NewService.swift */; };
+		ACC54710292FF20D008BAF72 /* DayEarnApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5470F292FF20D008BAF72 /* DayEarnApp.swift */; };
+		ACC54712292FF20D008BAF72 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC54711292FF20D008BAF72 /* ContentView.swift */; };
+		ACC54714292FF20E008BAF72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC54713292FF20E008BAF72 /* Assets.xcassets */; };
+		ACC54718292FF20E008BAF72 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACC54717292FF20E008BAF72 /* Preview Assets.xcassets */; };
+		ACC54721292FF429008BAF72 /* ClientList.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC54720292FF429008BAF72 /* ClientList.swift */; };
+		ACC54723292FF480008BAF72 /* XapSep.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC54722292FF480008BAF72 /* XapSep.swift */; };
+		ACC54725292FF4B4008BAF72 /* ClientEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC54724292FF4B4008BAF72 /* ClientEdit.swift */; };
+		ACC54727292FF4D1008BAF72 /* ScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC54726292FF4D1008BAF72 /* ScheduleView.swift */; };
+		ACC54729292FF4EC008BAF72 /* KhachRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC54728292FF4EC008BAF72 /* KhachRow.swift */; };
+		ACC5472B292FF50C008BAF72 /* ChonDichVu.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5472A292FF50C008BAF72 /* ChonDichVu.swift */; };
+		ACC5472D292FF524008BAF72 /* ChonNgay.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5472C292FF524008BAF72 /* ChonNgay.swift */; };
+		ACC5472F292FF53B008BAF72 /* ClientDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5472E292FF53B008BAF72 /* ClientDetail.swift */; };
+		ACC54731292FF55D008BAF72 /* ServiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC54730292FF55D008BAF72 /* ServiceView.swift */; };
+		ACC54733292FF575008BAF72 /* NewService.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC54732292FF575008BAF72 /* NewService.swift */; };
+		ACC54735292FF58E008BAF72 /* AddClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC54734292FF58E008BAF72 /* AddClient.swift */; };
+		ACC54737292FF5A6008BAF72 /* Khach.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC54736292FF5A6008BAF72 /* Khach.swift */; };
+		ACC54739292FF5D7008BAF72 /* KhachData.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC54738292FF5D7008BAF72 /* KhachData.swift */; };
+		ACC5473B292FF5ED008BAF72 /* Technician.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5473A292FF5ED008BAF72 /* Technician.swift */; };
+		ACC5473D292FF60B008BAF72 /* WeekEarn.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5473C292FF60B008BAF72 /* WeekEarn.swift */; };
+		ACC5473F292FF628008BAF72 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC5473E292FF628008BAF72 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		ACEB473D290A242E0076630E /* DayEarn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayEarn.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ACEB4740290A242E0076630E /* DayEarnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEarnApp.swift; sourceTree = "<group>"; };
-		ACEB4742290A242E0076630E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		ACEB4744290A242F0076630E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ACEB4747290A242F0076630E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		ACEB474F290A24950076630E /* Khach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Khach.swift; sourceTree = "<group>"; };
-		ACEB4751290A24F30076630E /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		ACEB4753290A25290076630E /* KhachData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KhachData.swift; sourceTree = "<group>"; };
-		ACEB4755290A254D0076630E /* Technician.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Technician.swift; sourceTree = "<group>"; };
-		ACEB4758290A25CC0076630E /* ClientList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientList.swift; sourceTree = "<group>"; };
-		ACEB475A290A26140076630E /* XapSep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XapSep.swift; sourceTree = "<group>"; };
-		ACEB475C290A26330076630E /* ClientEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientEdit.swift; sourceTree = "<group>"; };
-		ACEB475E290A265E0076630E /* KhachRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KhachRow.swift; sourceTree = "<group>"; };
-		ACEB4760290A26870076630E /* ClientDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetail.swift; sourceTree = "<group>"; };
-		ACEB4762290A26B20076630E /* ServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceView.swift; sourceTree = "<group>"; };
-		ACEB4764290A26CF0076630E /* NewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewService.swift; sourceTree = "<group>"; };
+		ACB6BE23293009D8000DE269 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		ACC5470C292FF20D008BAF72 /* DayEarn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DayEarn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACC5470F292FF20D008BAF72 /* DayEarnApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayEarnApp.swift; sourceTree = "<group>"; };
+		ACC54711292FF20D008BAF72 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ACC54713292FF20E008BAF72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ACC54715292FF20E008BAF72 /* DayEarn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DayEarn.entitlements; sourceTree = "<group>"; };
+		ACC54717292FF20E008BAF72 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		ACC54720292FF429008BAF72 /* ClientList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientList.swift; sourceTree = "<group>"; };
+		ACC54722292FF480008BAF72 /* XapSep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XapSep.swift; sourceTree = "<group>"; };
+		ACC54724292FF4B4008BAF72 /* ClientEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientEdit.swift; sourceTree = "<group>"; };
+		ACC54726292FF4D1008BAF72 /* ScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleView.swift; sourceTree = "<group>"; };
+		ACC54728292FF4EC008BAF72 /* KhachRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KhachRow.swift; sourceTree = "<group>"; };
+		ACC5472A292FF50C008BAF72 /* ChonDichVu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChonDichVu.swift; sourceTree = "<group>"; };
+		ACC5472C292FF524008BAF72 /* ChonNgay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChonNgay.swift; sourceTree = "<group>"; };
+		ACC5472E292FF53B008BAF72 /* ClientDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientDetail.swift; sourceTree = "<group>"; };
+		ACC54730292FF55D008BAF72 /* ServiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceView.swift; sourceTree = "<group>"; };
+		ACC54732292FF575008BAF72 /* NewService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewService.swift; sourceTree = "<group>"; };
+		ACC54734292FF58E008BAF72 /* AddClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddClient.swift; sourceTree = "<group>"; };
+		ACC54736292FF5A6008BAF72 /* Khach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Khach.swift; sourceTree = "<group>"; };
+		ACC54738292FF5D7008BAF72 /* KhachData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KhachData.swift; sourceTree = "<group>"; };
+		ACC5473A292FF5ED008BAF72 /* Technician.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Technician.swift; sourceTree = "<group>"; };
+		ACC5473C292FF60B008BAF72 /* WeekEarn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekEarn.swift; sourceTree = "<group>"; };
+		ACC5473E292FF628008BAF72 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		ACEB473A290A242E0076630E /* Frameworks */ = {
+		ACC54709292FF20D008BAF72 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -54,78 +66,85 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ACEB4734290A242E0076630E = {
+		ACC54703292FF20D008BAF72 = {
 			isa = PBXGroup;
 			children = (
-				ACEB473F290A242E0076630E /* DayEarn */,
-				ACEB473E290A242E0076630E /* Products */,
+				ACC5470E292FF20D008BAF72 /* DayEarn */,
+				ACC5470D292FF20D008BAF72 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		ACEB473E290A242E0076630E /* Products */ = {
+		ACC5470D292FF20D008BAF72 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ACEB473D290A242E0076630E /* DayEarn.app */,
+				ACC5470C292FF20D008BAF72 /* DayEarn.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ACEB473F290A242E0076630E /* DayEarn */ = {
+		ACC5470E292FF20D008BAF72 /* DayEarn */ = {
 			isa = PBXGroup;
 			children = (
-				ACEB4740290A242E0076630E /* DayEarnApp.swift */,
-				ACEB4757290A25850076630E /* view */,
-				ACEB474E290A24750076630E /* model */,
-				ACEB4744290A242F0076630E /* Assets.xcassets */,
-				ACEB4746290A242F0076630E /* Preview Content */,
+				ACB6BE23293009D8000DE269 /* Info.plist */,
+				ACC5470F292FF20D008BAF72 /* DayEarnApp.swift */,
+				ACC5471E292FF3E3008BAF72 /* view */,
+				ACC5471F292FF3F1008BAF72 /* model */,
+				ACC54713292FF20E008BAF72 /* Assets.xcassets */,
+				ACC54715292FF20E008BAF72 /* DayEarn.entitlements */,
+				ACC54716292FF20E008BAF72 /* Preview Content */,
 			);
 			path = DayEarn;
 			sourceTree = "<group>";
 		};
-		ACEB4746290A242F0076630E /* Preview Content */ = {
+		ACC54716292FF20E008BAF72 /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
-				ACEB4747290A242F0076630E /* Preview Assets.xcassets */,
+				ACC54717292FF20E008BAF72 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		ACEB474E290A24750076630E /* model */ = {
+		ACC5471E292FF3E3008BAF72 /* view */ = {
 			isa = PBXGroup;
 			children = (
-				ACEB474F290A24950076630E /* Khach.swift */,
-				ACEB4753290A25290076630E /* KhachData.swift */,
-				ACEB4755290A254D0076630E /* Technician.swift */,
-				ACEB4751290A24F30076630E /* Service.swift */,
-			);
-			path = model;
-			sourceTree = "<group>";
-		};
-		ACEB4757290A25850076630E /* view */ = {
-			isa = PBXGroup;
-			children = (
-				ACEB4742290A242E0076630E /* ContentView.swift */,
-				ACEB4758290A25CC0076630E /* ClientList.swift */,
-				ACEB475A290A26140076630E /* XapSep.swift */,
-				ACEB475C290A26330076630E /* ClientEdit.swift */,
-				ACEB475E290A265E0076630E /* KhachRow.swift */,
-				ACEB4760290A26870076630E /* ClientDetail.swift */,
-				ACEB4762290A26B20076630E /* ServiceView.swift */,
-				ACEB4764290A26CF0076630E /* NewService.swift */,
+				ACC54711292FF20D008BAF72 /* ContentView.swift */,
+				ACC54724292FF4B4008BAF72 /* ClientEdit.swift */,
+				ACC54726292FF4D1008BAF72 /* ScheduleView.swift */,
+				ACC54728292FF4EC008BAF72 /* KhachRow.swift */,
+				ACC5472A292FF50C008BAF72 /* ChonDichVu.swift */,
+				ACC5472C292FF524008BAF72 /* ChonNgay.swift */,
+				ACC5472E292FF53B008BAF72 /* ClientDetail.swift */,
+				ACC54730292FF55D008BAF72 /* ServiceView.swift */,
+				ACC54732292FF575008BAF72 /* NewService.swift */,
+				ACC54734292FF58E008BAF72 /* AddClient.swift */,
+				ACC54720292FF429008BAF72 /* ClientList.swift */,
+				ACC54722292FF480008BAF72 /* XapSep.swift */,
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		ACC5471F292FF3F1008BAF72 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				ACC54736292FF5A6008BAF72 /* Khach.swift */,
+				ACC54738292FF5D7008BAF72 /* KhachData.swift */,
+				ACC5473A292FF5ED008BAF72 /* Technician.swift */,
+				ACC5473C292FF60B008BAF72 /* WeekEarn.swift */,
+				ACC5473E292FF628008BAF72 /* Service.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ACEB473C290A242E0076630E /* DayEarn */ = {
+		ACC5470B292FF20D008BAF72 /* DayEarn */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ACEB474B290A242F0076630E /* Build configuration list for PBXNativeTarget "DayEarn" */;
+			buildConfigurationList = ACC5471B292FF20E008BAF72 /* Build configuration list for PBXNativeTarget "DayEarn" */;
 			buildPhases = (
-				ACEB4739290A242E0076630E /* Sources */,
-				ACEB473A290A242E0076630E /* Frameworks */,
-				ACEB473B290A242E0076630E /* Resources */,
+				ACC54708292FF20D008BAF72 /* Sources */,
+				ACC54709292FF20D008BAF72 /* Frameworks */,
+				ACC5470A292FF20D008BAF72 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -133,25 +152,25 @@
 			);
 			name = DayEarn;
 			productName = DayEarn;
-			productReference = ACEB473D290A242E0076630E /* DayEarn.app */;
+			productReference = ACC5470C292FF20D008BAF72 /* DayEarn.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		ACEB4735290A242E0076630E /* Project object */ = {
+		ACC54704292FF20D008BAF72 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1410;
 				TargetAttributes = {
-					ACEB473C290A242E0076630E = {
+					ACC5470B292FF20D008BAF72 = {
 						CreatedOnToolsVersion = 14.1;
 					};
 				};
 			};
-			buildConfigurationList = ACEB4738290A242E0076630E /* Build configuration list for PBXProject "DayEarn" */;
+			buildConfigurationList = ACC54707292FF20D008BAF72 /* Build configuration list for PBXProject "DayEarn" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -159,53 +178,58 @@
 				en,
 				Base,
 			);
-			mainGroup = ACEB4734290A242E0076630E;
-			productRefGroup = ACEB473E290A242E0076630E /* Products */;
+			mainGroup = ACC54703292FF20D008BAF72;
+			productRefGroup = ACC5470D292FF20D008BAF72 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ACEB473C290A242E0076630E /* DayEarn */,
+				ACC5470B292FF20D008BAF72 /* DayEarn */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		ACEB473B290A242E0076630E /* Resources */ = {
+		ACC5470A292FF20D008BAF72 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACEB4748290A242F0076630E /* Preview Assets.xcassets in Resources */,
-				ACEB4745290A242F0076630E /* Assets.xcassets in Resources */,
+				ACC54718292FF20E008BAF72 /* Preview Assets.xcassets in Resources */,
+				ACC54714292FF20E008BAF72 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		ACEB4739290A242E0076630E /* Sources */ = {
+		ACC54708292FF20D008BAF72 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACEB475F290A265E0076630E /* KhachRow.swift in Sources */,
-				ACEB4761290A26870076630E /* ClientDetail.swift in Sources */,
-				ACEB475B290A26140076630E /* XapSep.swift in Sources */,
-				ACEB475D290A26330076630E /* ClientEdit.swift in Sources */,
-				ACEB4763290A26B20076630E /* ServiceView.swift in Sources */,
-				ACEB4743290A242E0076630E /* ContentView.swift in Sources */,
-				ACEB4752290A24F30076630E /* Service.swift in Sources */,
-				ACEB4741290A242E0076630E /* DayEarnApp.swift in Sources */,
-				ACEB4759290A25CC0076630E /* ClientList.swift in Sources */,
-				ACEB4765290A26CF0076630E /* NewService.swift in Sources */,
-				ACEB4756290A254D0076630E /* Technician.swift in Sources */,
-				ACEB4754290A25290076630E /* KhachData.swift in Sources */,
-				ACEB4750290A24950076630E /* Khach.swift in Sources */,
+				ACC54735292FF58E008BAF72 /* AddClient.swift in Sources */,
+				ACC5473B292FF5ED008BAF72 /* Technician.swift in Sources */,
+				ACC54737292FF5A6008BAF72 /* Khach.swift in Sources */,
+				ACC5473D292FF60B008BAF72 /* WeekEarn.swift in Sources */,
+				ACC54723292FF480008BAF72 /* XapSep.swift in Sources */,
+				ACC5473F292FF628008BAF72 /* Service.swift in Sources */,
+				ACC54731292FF55D008BAF72 /* ServiceView.swift in Sources */,
+				ACC5472F292FF53B008BAF72 /* ClientDetail.swift in Sources */,
+				ACC5472D292FF524008BAF72 /* ChonNgay.swift in Sources */,
+				ACC54721292FF429008BAF72 /* ClientList.swift in Sources */,
+				ACC54712292FF20D008BAF72 /* ContentView.swift in Sources */,
+				ACC54739292FF5D7008BAF72 /* KhachData.swift in Sources */,
+				ACC54733292FF575008BAF72 /* NewService.swift in Sources */,
+				ACC54710292FF20D008BAF72 /* DayEarnApp.swift in Sources */,
+				ACC54725292FF4B4008BAF72 /* ClientEdit.swift in Sources */,
+				ACC54729292FF4EC008BAF72 /* KhachRow.swift in Sources */,
+				ACC5472B292FF50C008BAF72 /* ChonDichVu.swift in Sources */,
+				ACC54727292FF4D1008BAF72 /* ScheduleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		ACEB4749290A242F0076630E /* Debug */ = {
+		ACC54719292FF20E008BAF72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -255,17 +279,17 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		ACEB474A290A242F0076630E /* Release */ = {
+		ACC5471A292FF20E008BAF72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -309,74 +333,99 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		ACEB474C290A242F0076630E /* Debug */ = {
+		ACC5471C292FF20E008BAF72 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = DayEarn/DayEarn.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DayEarn/Preview Content\"";
 				DEVELOPMENT_TEAM = T9MS7UD3T7;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = ap;
+				INFOPLIST_FILE = DayEarn/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DayEarn;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = quang.DayEarn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SKIP_INSTALL = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		ACEB474D290A242F0076630E /* Release */ = {
+		ACC5471D292FF20E008BAF72 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = DayEarn/DayEarn.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"DayEarn/Preview Content\"";
 				DEVELOPMENT_TEAM = T9MS7UD3T7;
+				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = ap;
+				INFOPLIST_FILE = DayEarn/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = DayEarn;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.2;
 				PRODUCT_BUNDLE_IDENTIFIER = quang.DayEarn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SKIP_INSTALL = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -386,25 +435,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ACEB4738290A242E0076630E /* Build configuration list for PBXProject "DayEarn" */ = {
+		ACC54707292FF20D008BAF72 /* Build configuration list for PBXProject "DayEarn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ACEB4749290A242F0076630E /* Debug */,
-				ACEB474A290A242F0076630E /* Release */,
+				ACC54719292FF20E008BAF72 /* Debug */,
+				ACC5471A292FF20E008BAF72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ACEB474B290A242F0076630E /* Build configuration list for PBXNativeTarget "DayEarn" */ = {
+		ACC5471B292FF20E008BAF72 /* Build configuration list for PBXNativeTarget "DayEarn" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ACEB474C290A242F0076630E /* Debug */,
-				ACEB474D290A242F0076630E /* Release */,
+				ACC5471C292FF20E008BAF72 /* Debug */,
+				ACC5471D292FF20E008BAF72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = ACEB4735290A242E0076630E /* Project object */;
+	rootObject = ACC54704292FF20D008BAF72 /* Project object */;
 }

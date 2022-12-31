@@ -19,7 +19,7 @@ struct XapSep: View {
                     Text("Total:")
                     Spacer()
                     Text("\(worker.tinhTheoNgay())")
-                        .foregroundColor(worker.tinhTheoNgay() > 2000 ? .purple : .primary)
+                        .foregroundColor(worker.tinhTheoNgay() > 3000 ? .purple : .primary)
                 }
                 Section(header: Text("Today")){
                     HStack {
